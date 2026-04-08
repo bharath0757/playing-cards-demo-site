@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Cards Flexbox</title>
+    <style>
+        /* Main container styling */
+        #playing-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px;
+            background-color: #2c3e50;
+            min-height: 100vh;
+        }
+
+        /* Individual card styling */
+        .card {
+            display: flex;
+            justify-content: space-between;
+            width: 150px;
+            height: 220px;
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            font-family: Arial, sans-serif;
+            font-size: 1.5rem;
+            box-sizing: border-box; /* Ensures padding doesn't affect width/height */
+        }
+
+        /* Column alignment properties */
+        .left {
+            align-self: flex-start;
+        }
+
+        .middle {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right {
+            align-self: flex-end;
+        }
+
+        /* Optional: Making symbols look better */
+        .middle span {
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <main id="playing-cards">
+        <div class="card">
+            <div class="left">A</div>
+            <div class="middle">
+                <span>&spades;</span>
+            </div>
+            <div class="right">A</div>
+        </div>
+
+        <div class="card">
+            <div class="left">K</div>
+            <div class="middle">
+                <span>&hearts;</span>
+            </div>
+            <div class="right">K</div>
+        </div>
+
+        <div class="card">
+            <div class="left">Q</div>
+            <div class="middle">
+                <span>&diams;</span>
+            </div>
+            <div class="right">Q</div>
+        </div>
+    </main>
+
+</body>
+</html>
